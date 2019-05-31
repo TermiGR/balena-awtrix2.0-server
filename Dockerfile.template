@@ -4,8 +4,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN javac awtrix.jar
-
 ENV INITSYSTEM=on
 
 CMD ["java", "-jar", "awtrix.jar"]
