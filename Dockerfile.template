@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jdk
 COPY . /usr/src/awtrix
 WORKDIR /usr/src/awtrix
 CMD ["java","-jar", "awtrix.jar"]
