@@ -1,11 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-openjdk:latest
-
-WORKDIR /usr/src/app
-
-COPY . .
-
-RUN javac awtrix.jar
-
-ENV INITSYSTEM=on
-
-CMD java - jar awtrix.jar
+FROM openjdk:8
+COPY . /usr/src/awtrix
+WORKDIR /usr/src/awtrix
+CMD ["java","-jar", "awtrix.jar"]
